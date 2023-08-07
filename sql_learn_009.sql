@@ -4,11 +4,12 @@
 */
 
 /*自分の回答*/
-select cid, count(date_time) as number_of_visits
-from sample.web_log
-group by cid
-order by 2 desc
-limit 3
+select cid, count(*) as number_of_visits
+ from sample.web_log
+ group by cid
+ order by number_of_visits desc
+ limit 3
+
 
 
 
